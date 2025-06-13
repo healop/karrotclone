@@ -4,14 +4,16 @@
 
 plugins {
     `java-library`
-    `maven-publish`
+    id("org.springframework.boot") version "3.5.0"
+    id("io.spring.dependency-management") version "1.1.4" // 의존성 관리 플러그인 추가  
 }
 
 repositories {
-    mavenLocal()
-    maven {
-        url = uri("https://repo.maven.apache.org/maven2/")
-    }
+    mavenCentral()
+}
+
+java {
+    toolchain.languageVersion.set(JavaLanguageVersion.of(17))
 }
 
 dependencies {
@@ -24,18 +26,13 @@ dependencies {
     runtimeOnly(libs.com.h2database.h2)
     testImplementation(libs.org.springframework.boot.spring.boot.starter.test)
     testImplementation(libs.org.springframework.security.spring.security.test)
+    implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.0.4")
 }
 
 group = "com.clone"
 version = "0.0.1-SNAPSHOT"
 description = "karrotbackend"
-java.sourceCompatibility = JavaVersion.VERSION_1_8
-
-publishing {
-    publications.create<MavenPublication>("maven") {
-        from(components["java"])
-    }
-}
+java.sourceCompatibility = JavaVersion.VERSION_17
 
 tasks.withType<JavaCompile>() {
     options.encoding = "UTF-8"
