@@ -17,16 +17,18 @@ java {
 }
 
 dependencies {
-    api(libs.org.springframework.boot.spring.boot.starter.data.jpa)
-    api(libs.org.springframework.boot.spring.boot.starter.oauth2.client)
-    api(libs.org.springframework.boot.spring.boot.starter.security)
-    api(libs.org.springframework.boot.spring.boot.starter.web)
-    api(libs.org.projectlombok.lombok)
-    runtimeOnly(libs.org.springframework.boot.spring.boot.devtools)
-    runtimeOnly(libs.com.h2database.h2)
-    testImplementation(libs.org.springframework.boot.spring.boot.starter.test)
-    testImplementation(libs.org.springframework.security.spring.security.test)
+    api("org.springframework.boot:spring-boot-starter-data-jpa")
+    api("org.springframework.boot:spring-boot-starter-oauth2-client")
+    api("org.springframework.boot:spring-boot-starter-security")
+    api("org.springframework.boot:spring-boot-starter-web")
+    api("org.projectlombok:lombok")
+    runtimeOnly("org.springframework.boot:spring-boot-devtools")
+    runtimeOnly("com.h2database:h2")
+    testImplementation("org.springframework.boot:spring-boot-starter-test")
+    testImplementation("org.springframework.security:spring-security-test")
     implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.0.4")
+    implementation("org.springframework.boot:spring-boot-starter-security")
+    implementation("org.springframework.boot:spring-boot-starter-web")
 }
 
 group = "com.clone"
