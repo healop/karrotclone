@@ -29,9 +29,10 @@ dependencies {
     implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.0.4")
     implementation("org.springframework.boot:spring-boot-starter-security")
     implementation("org.springframework.boot:spring-boot-starter-web")
+    runtimeOnly("org.postgresql:postgresql")
 }
 
-group = "com.clone"
+group = "com.clone.karrotbackend"
 version = "0.0.1-SNAPSHOT"
 description = "karrotbackend"
 java.sourceCompatibility = JavaVersion.VERSION_17
