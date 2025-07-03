@@ -12,6 +12,13 @@ repositories {
     mavenCentral()
 }
 
+//lombok 설정 추가 시작
+configurations {
+    compileOnly {
+        extendsFrom(configurations.annotationProcessor.get())
+    }
+}
+
 java {
     toolchain.languageVersion.set(JavaLanguageVersion.of(17))
 }
@@ -30,6 +37,10 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-security")
     implementation("org.springframework.boot:spring-boot-starter-web")
     runtimeOnly("org.postgresql:postgresql")
+    compileOnly ("org.projectlombok:lombok")
+    annotationProcessor ("org.projectlombok:lombok")
+    testCompileOnly ("org.projectlombok:lombok")
+    testAnnotationProcessor ("org.projectlombok:lombok")
 }
 
 group = "com.clone.karrotbackend"
