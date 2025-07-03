@@ -546,6 +546,43 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@tanstack/query-core@npm:5.71.0":
+  version: 5.71.0
+  resolution: "@tanstack/query-core@npm:5.71.0"
+  checksum: 10c0/9f22ca925b7b16d8cb1f32a13b16d5ebbbd4bf89711b1019e47f38d8bef3da4434371d4009c2f5c49a7ff458b7a1e62f10a1612647a484e4a1d347f5370ab760
+  languageName: node
+  linkType: hard
+
+"@tanstack/query-devtools@npm:5.81.2":
+  version: 5.81.2
+  resolution: "@tanstack/query-devtools@npm:5.81.2"
+  checksum: 10c0/f942cba7bd3ecb471063cd472eeebb2ec76005feeb7e0f357b191da5ab9f769aa767bc88d4da82b2b39c4fcbb16dfed38ce3c77b6eea4d4c30405368c1120207
+  languageName: node
+  linkType: hard
+
+"@tanstack/react-query-devtools@npm:^5.81.2":
+  version: 5.81.2
+  resolution: "@tanstack/react-query-devtools@npm:5.81.2"
+  dependencies:
+    "@tanstack/query-devtools": "npm:5.81.2"
+  peerDependencies:
+    "@tanstack/react-query": ^5.81.2
+    react: ^18 || ^19
+  checksum: 10c0/69ccd39a202b9e029e44f1bd1afb46673620c23990f20612f617979548afebb7943ba51f32acfca73564cd71ccc7e848cdc0be6ee9441885b0e1c43b87c73a14
+  languageName: node
+  linkType: hard
+
+"@tanstack/react-query@npm:5.71.0":
+  version: 5.71.0
+  resolution: "@tanstack/react-query@npm:5.71.0"
+  dependencies:
+    "@tanstack/query-core": "npm:5.71.0"
+  peerDependencies:
+    react: ^18 || ^19
+  checksum: 10c0/3d5f6113de1e503036048a1dd45c210245215279d8a668eaa43441be84123c175def20625865b5e75cc7ad8524f17d7125ba4755808967c95536317745dfcf17
+  languageName: node
+  linkType: hard
+
 "@tybys/wasm-util@npm:^0.9.0":
   version: 0.9.0
   resolution: "@tybys/wasm-util@npm:0.9.0"
@@ -695,17 +732,27 @@ __metadata:
   languageName: node
   linkType: hard
 
+"js-tokens@npm:^3.0.0 || ^4.0.0":
+  version: 4.0.0
+  resolution: "js-tokens@npm:4.0.0"
+  checksum: 10c0/e248708d377aa058eacf2037b07ded847790e6de892bbad3dac0abba2e759cb9f121b00099a65195616badcb6eca8d14d975cb3e89eb1cfda644756402c8aeed
+  languageName: node
+  linkType: hard
+
 "karrotclone@workspace:.":
   version: 0.0.0-use.local
   resolution: "karrotclone@workspace:."
   dependencies:
     "@tailwindcss/postcss": "npm:^4"
+    "@tanstack/react-query": "npm:5.71.0"
+    "@tanstack/react-query-devtools": "npm:^5.81.2"
     "@types/node": "npm:^20"
     "@types/react": "npm:^19"
     "@types/react-dom": "npm:^19"
     next: "npm:15.3.3"
-    react: "npm:^19.0.0"
-    react-dom: "npm:^19.0.0"
+    react: "npm:18.2.0"
+    react-dom: "npm:18.2.0"
+    react-icons: "npm:^5.5.0"
     tailwindcss: "npm:^4"
     typescript: "npm:^5"
     yarn: "npm:^1.22.22"
@@ -819,6 +866,17 @@ __metadata:
     lightningcss-win32-x64-msvc:
       optional: true
   checksum: 10c0/1e1ad908f3c68bf39d964a6735435a8dd5474fb2765076732d64a7b6aa2af1f084da65a9462443a9adfebf7dcfb02fb532fce1d78697f2a9de29c8f40f09aee3
+  languageName: node
+  linkType: hard
+
+"loose-envify@npm:^1.1.0":
+  version: 1.4.0
+  resolution: "loose-envify@npm:1.4.0"
+  dependencies:
+    js-tokens: "npm:^3.0.0 || ^4.0.0"
+  bin:
+    loose-envify: cli.js
+  checksum: 10c0/655d110220983c1a4b9c0c679a2e8016d4b67f6e9c7b5435ff5979ecdb20d0813f4dec0a08674fcbdd4846a3f07edbb50a36811fd37930b94aaa0d9daceb017e
   languageName: node
   linkType: hard
 
@@ -955,28 +1013,42 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-dom@npm:^19.0.0":
-  version: 19.1.0
-  resolution: "react-dom@npm:19.1.0"
+"react-dom@npm:18.2.0":
+  version: 18.2.0
+  resolution: "react-dom@npm:18.2.0"
   dependencies:
-    scheduler: "npm:^0.26.0"
+    loose-envify: "npm:^1.1.0"
+    scheduler: "npm:^0.23.0"
   peerDependencies:
-    react: ^19.1.0
-  checksum: 10c0/3e26e89bb6c67c9a6aa86cb888c7a7f8258f2e347a6d2a15299c17eb16e04c19194e3452bc3255bd34000a61e45e2cb51e46292392340432f133e5a5d2dfb5fc
+    react: ^18.2.0
+  checksum: 10c0/66dfc5f93e13d0674e78ef41f92ed21dfb80f9c4ac4ac25a4b51046d41d4d2186abc915b897f69d3d0ebbffe6184e7c5876f2af26bfa956f179225d921be713a
   languageName: node
   linkType: hard
 
-"react@npm:^19.0.0":
-  version: 19.1.0
-  resolution: "react@npm:19.1.0"
-  checksum: 10c0/530fb9a62237d54137a13d2cfb67a7db6a2156faed43eecc423f4713d9b20c6f2728b026b45e28fcd72e8eadb9e9ed4b089e99f5e295d2f0ad3134251bdd3698
+"react-icons@npm:^5.5.0":
+  version: 5.5.0
+  resolution: "react-icons@npm:5.5.0"
+  peerDependencies:
+    react: "*"
+  checksum: 10c0/a24309bfc993c19cbcbfc928157e53a137851822779977b9588f6dd41ffc4d11ebc98b447f4039b0d309a858f0a42980f6bfb4477fb19f9f2d1bc2e190fcf79c
   languageName: node
   linkType: hard
 
-"scheduler@npm:^0.26.0":
-  version: 0.26.0
-  resolution: "scheduler@npm:0.26.0"
-  checksum: 10c0/5b8d5bfddaae3513410eda54f2268e98a376a429931921a81b5c3a2873aab7ca4d775a8caac5498f8cbc7d0daeab947cf923dbd8e215d61671f9f4e392d34356
+"react@npm:18.2.0":
+  version: 18.2.0
+  resolution: "react@npm:18.2.0"
+  dependencies:
+    loose-envify: "npm:^1.1.0"
+  checksum: 10c0/b562d9b569b0cb315e44b48099f7712283d93df36b19a39a67c254c6686479d3980b7f013dc931f4a5a3ae7645eae6386b4aa5eea933baa54ecd0f9acb0902b8
+  languageName: node
+  linkType: hard
+
+"scheduler@npm:^0.23.0":
+  version: 0.23.2
+  resolution: "scheduler@npm:0.23.2"
+  dependencies:
+    loose-envify: "npm:^1.1.0"
+  checksum: 10c0/26383305e249651d4c58e6705d5f8425f153211aef95f15161c151f7b8de885f24751b377e4a0b3dd42cce09aad3f87a61dab7636859c0d89b7daf1a1e2a5c78
   languageName: node
   linkType: hard
 
