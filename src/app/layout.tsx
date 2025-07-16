@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import ReactQueryProvider from "./config/ReactQueryProvider";
+import Navbar from "./components/topbar/NavBar";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Karrot Clone",
@@ -13,7 +15,22 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <ReactQueryProvider>
       <html lang="en">
         <body>
-          {children}
+          <header className="shadow">
+            <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex justify-between items-center h-16">
+              {/* 로고 */}
+              <a href="/" className="text-orange-500 font-bold text-2xl">당근클론</a>
+              {/* 네비게이션 */}
+              <Navbar />
+              {/* 로그인 버튼 */}
+              <div>
+                <Link href="/login" className="hover:text-orange-500 text-sm">로그인 / 회원가입</Link>
+              </div>
+            </div>
+            </div>
+          </header>
+          <main>{children}</main>
+          {/* <footer>푸터</footer>        */}
         </body>
       </html>
     </ReactQueryProvider>

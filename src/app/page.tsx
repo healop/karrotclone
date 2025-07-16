@@ -5,27 +5,11 @@ import TopBar from '@/components/DongNaeCommon/TopBar'
 import CategorySidebar from './components/DongNaeCommon/CategorySidebar'
 import ArticleList from '@/components/articles/ArticleList'
 import Navbar from '@/components/topbar/NavBar'
+import Link from 'next/link'
 
 export default function HomePage() {
   return (
     <div>
-      <header className="shadow">
-        <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            {/* 로고 */}
-            <a href="/" className="text-orange-500 font-bold text-xl">당근클론</a>
-            {/* 네비게이션 */}
-            <Navbar />
-            {/* 로그인 버튼 */}
-            <div>
-              <button className="px-4 py-2 bg-orange-500 text-white text-sm rounded hover:bg-orange-600">
-                로그인
-              </button>
-            </div>
-          </div>
-        </div>
-      </header>
-
       <main className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 pb-8">
         {/* 콘텐츠 들어가는 영역 */}
         {/* 상단 영역: 제목, 경로, 검색창 */}
