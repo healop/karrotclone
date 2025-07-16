@@ -1,5 +1,6 @@
 'use client';
 import { useState } from 'react';
+import { signIn } from "next-auth/react";
 
 export default function LoginForm() {
   const [showPassword, setShowPassword] = useState(false);
@@ -29,6 +30,18 @@ export default function LoginForm() {
         </div>
       </div>
       <button type="submit" className="w-full bg-orange-500 text-white py-2 rounded hover:bg-orange-600 transition">로그인</button>
+      <div className="mt-4 align-items-center flex justify-center gap-4">
+        <div className="text-sm text-gray-600 hover:text-orange-500 cursor-pointer">이메일 찾기</div>
+        <div className="text-sm text-gray-600 hover:text-orange-500 cursor-pointer">비밀번호 찾기</div>
+      </div>
+      <div className="mt-6 text-center">
+        <button
+          onClick={() => signIn("kakao", { callbackUrl: "/" })}
+          className="bg-yellow-500 text-white py-2 px-4 rounded"
+        >
+          카카오로 시작하기
+        </button>
+      </div>
     </form>
   );
 }
